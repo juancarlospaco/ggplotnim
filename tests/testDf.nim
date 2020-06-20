@@ -2,6 +2,9 @@ import ggplotnim, unittest, sequtils, math, strutils, streams, sugar
 import algorithm
 import seqmath
 
+when not declared(AssertionDefect):
+  type AssertionDefect = AssertionError
+
 suite "Data frame tests":
   test "Creation of DFs from seqs":
     let a = [1, 2, 3]
